@@ -1,0 +1,33 @@
+[project]
+name = "space"
+version = "0.1.0"
+description = "A memory-native space agent for contextual AI conversations"
+readme = "README.md"
+authors = [
+    { name = "Hanlin", email = "mukimasta@outlook.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "textual>=0.80.0",
+]
+
+[project.scripts]
+space = "space.main:main"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+markers = [
+    "e2e: end-to-end tests requiring real API (deselect with '-m \"not e2e\"')",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+    "pytest-asyncio>=1.2.0",
+    "pytest-timeout>=2.3.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.11,<0.10.0"]
+build-backend = "uv_build"

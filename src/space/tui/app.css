@@ -1,0 +1,121 @@
+Screen {
+    layout: vertical;
+    background: $background 0%;
+}
+
+#message-area {
+    height: 1fr;
+    border: none;
+    background: $background 0%;
+}
+
+#separator-top, #separator-bottom {
+    height: 1;
+    min-height: 1;
+    width: 100%;
+    border: none;
+    background: $background 0%;
+    color: $primary-darken-1;
+}
+
+#input-area {
+    height: auto;
+    min-height: 1;
+    border: none;
+    background: $background 0%;
+}
+
+#status-bar {
+    height: 1;
+    min-height: 1;
+    border: none;
+    background: $background 0%;
+}
+
+/* No boxes, only horizontal dividers; follow terminal background */
+MessageArea, InputArea, StatusBar, TextArea, Label {
+    border: none;
+    background: $background 0%;
+}
+
+/* Force input TextArea to match terminal - overrides internal dark background */
+SubmitTextArea,
+#message-input {
+    background: $background 0% !important;
+}
+
+.user-message {
+    color: $text-muted;
+    padding: 0 0 1 0;
+}
+
+.assistant-message {
+    padding: 0 0 1 0;
+}
+
+.error {
+    color: $error;
+}
+
+.status-message {
+    color: $text-muted;
+    padding: 0 0 1 0;
+}
+
+.tool-call {
+    color: $text-muted;
+    padding: 0 0 0 1;
+}
+
+SelectionScreen, ApiKeyPromptScreen {
+    layout: vertical;
+    width: 100%;
+    height: 100%;
+    background: $background;
+    border: none;
+}
+
+#selection-title {
+    height: auto;
+    padding: 1 2;
+    color: $text;
+}
+
+#selection-list {
+    width: 100%;
+    height: 1fr;
+    border: none;
+    background: $background;
+}
+
+ApiKeyPromptScreen #api-key-label {
+    height: auto;
+    padding: 1 2;
+}
+
+ApiKeyPromptScreen #api-key-input {
+    width: 100%;
+    margin: 1 2;
+    background: $background;
+}
+
+RewindScreen {
+    layout: vertical;
+    width: 100%;
+    height: 100%;
+    background: $background;
+    border: none;
+}
+
+#rewind-title {
+    height: auto;
+    padding: 1 2;
+    color: $text;
+}
+
+#rewind-list {
+    width: 100%;
+    height: 1fr;
+    border: none;
+    background: $background;
+}
